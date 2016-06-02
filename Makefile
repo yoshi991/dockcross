@@ -25,6 +25,9 @@ linux-armv7: base linux-armv7/Dockerfile linux-armv7/Toolchain.cmake
 linux-ppc64le: base linux-ppc64le/Dockerfile linux-ppc64le/Toolchain.cmake
 	$(DOCKER) build -t $(IMAGE)-linux-ppc64le linux-ppc64le
 
+tomatoware-arm: base tomatoware-arm/Dockerfile tomatoware-arm/Toolchain.cmake
+	$(DOCKER) build -t $(IMAGE)-tomatoware-arm tomatoware-arm
+
 windows-x86: base windows-x86/Dockerfile windows-x86/settings.mk
 	$(DOCKER) build -t $(IMAGE)-windows-x86 windows-x86
 
